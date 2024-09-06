@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Body Background*/
+body {
+    background: rgb(0, 150, 136);
+    background: linear-gradient(0deg, rgba(219, 219, 211, 1) 80%, rgba(0, 150, 136, 1) 80%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Big container*/
+#big-container {
+    height: 94vh;
+    border: 2px black solid;
+    width: 75%;
+    background-color: white;
+
+}
+
+
+#left-side {
+    flex-basis: 40%;
+}
+
+#right-side {
+    flex-basis: 60%;
+}
