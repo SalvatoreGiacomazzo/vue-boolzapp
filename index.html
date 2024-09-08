@@ -5,60 +5,162 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boolzapp</title>
-    <!--BootStrap-->
+    <!--FontAwesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--Bootstrap CSS-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!--CSS-->
     <link rel="stylesheet" href="./style.css">
+    <!--Script-->
+    <script defer src="./script.js"></script>
 </head>
 
 <body>
-    <!--Boolzapp Container-->
-    <div id="big-container" class="d-flex flex-wrap">
-        <div id="left-side" class="h-100 w-40 border border-dark">Lorem ipsum dolor sit amet consectetur adipisicing
-            elit. Nisi, adipisci et magni molestiae facere provident ea quibusdam ad assumenda blanditiis enim iure
-            sint! Eligendi velit ratione rem eveniet, officiis porro.
-            Consectetur doloribus tempore veniam maiores repellat exercitationem sed aliquam consequatur aliquid eius
-            minima, earum, dolor labore eaque incidunt similique. Veritatis, tempora! Suscipit quibusdam ea cum
-            laudantium dolores, temporibus dolore. Similique.
-            Expedita magni nostrum blanditiis voluptatem maxime illum, dolorem vitae temporibus impedit id pariatur,
-            tempora corrupti, ipsam aut quod commodi placeat maiores architecto tempore cum officia earum sint! Saepe,
-            doloribus suscipit?
-            A impedit odio optio rerum non accusamus cum tempore perferendis. Quibusdam provident voluptatum omnis
-            corrupti labore alias, aperiam earum itaque, doloribus, architecto consequuntur nihil? Ut omnis incidunt
-            iure necessitatibus minus.
-            Molestiae iste numquam ea nesciunt porro incidunt, consectetur, culpa asperiores a adipisci amet unde,
-            laudantium enim! Officiis dignissimos aliquam, fuga, nihil neque facilis aut sed ducimus a velit qui eius?
-        </div>
-        <div id="right-side" class="h-100 w-60 border border-dark">Lorem ipsum dolor sit amet consectetur, adipisicing
-            elit. Maiores sequi minus et ex voluptas. Voluptas, autem doloremque itaque, voluptatem, tempore consectetur
-            fugit commodi mollitia animi veniam iusto alias minus voluptates!
-            In iure illo odio totam magnam nostrum facere voluptatum debitis nam, assumenda cumque commodi odit. Vel
-            quasi porro, libero nobis fuga molestiae pariatur, dignissimos soluta asperiores officiis voluptate repellat
-            quod!
-            Inventore officiis nisi, dolorem dolorum error voluptatibus a fugiat modi dolor delectus commodi! Reiciendis
-            veritatis, quos atque possimus ut, porro, animi vel minus rem aut aspernatur voluptas deleniti recusandae
-            qui?
-            Minima, ducimus eveniet laboriosam numquam fugit aliquid magni ut vitae veniam repellendus dolore voluptate
-            inventore rerum voluptas nostrum voluptatum odio cupiditate eligendi quis eum incidunt delectus id. Aliquam,
-            aperiam ex!
-            Veniam totam, aliquid consequatur voluptatibus nobis sapiente rerum quaerat asperiores qui. Impedit,
-            incidunt delectus, distinctio expedita eos voluptatibus dicta inventore sint, atque quod nihil ipsam cum
-            asperiores voluptates adipisci nemo?</div>
-
-
-
-
-
-
-
-
-
-
-    </div>
-    <!--Vue-->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <script src="./script.js"></script>
+    <!--Big container-->
+    <div id="big-container" class="d-flex">
+        <div id="app" class="d-flex flex-row w-100 h-100">
+            <!-- Sinistra (40%) -->
+            <div id="left-side" class=" ">
+                <!--header-->
+                <header class="d-flex justify-content-between align-items-center">
+                    <div id="left-header-left" class="d-flex align-items-center">
+                        <img src="./img/avatar_io.png" alt=""> <span id="name">Sofia</span>
+                    </div>
+                    <div id="left-header-right" class="d-flex align-items-center">
+                        <i class="fa-solid fa-circle-notch"></i>
+                        <i class="fa-solid fa-message"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </header>
+                <!--notifications section-->
+                <div id="notifications" class="d-flex align-items-center">
+                    <i class="fa-solid fa-bell-slash"></i>
+                    <div class="d-flex justify-content-around flex-column">
+                        <p>Ricevi notifiche di nuovi messaggi</p>
+                        <a href="" class="text-secondary">Attiva notifiche desktop</a>
+                    </div>
+                </div>
+                <!--searchbar section-->
+                <div id="search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Cerca o inizia una nuova Chat">
+                </div>
+                <!--Chats-->
+                <div id="chatlist">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus iusto officiis inventore,
+                    reiciendis odio asperiores, harum sed aliquid fugiat repudiandae eum nulla neque, consequuntur
+                    laborum. Tenetur ipsum adipisci quis enim.
+                    Nisi quis commodi porro? Suscipit facilis praesentium quis ipsa asperiores cumque dolor ut
+                    architecto quisquam? Alias necessitatibus, explicabo tenetur hic debitis quidem, inventore qui sed
+                    excepturi minima doloremque dolorum nostrum.
+                    Commodi distinctio deleniti illo dolores ut adipisci, fugiat numquam vel obcaecati facilis neque
+                    cupiditate totam dolore, iste, ad repellendus dolor minus inventore ex perspiciatis nam placeat
+                    magnam nulla vero! Nobis?
+                    Dolorum debitis quibusdam nihil quod distinctio voluptate sequi repellat ratione culpa, animi illo
+                    iste tenetur cum mollitia, esse provident accusamus natus! Pariatur a ratione ipsa totam saepe
+                    molestiae odit alias!
+                    Tempora eum ea fuga architecto nobis deserunt neque illo velit dolorem vero aperiam unde voluptas
+                    vel optio, beatae non sint eligendi a molestiae commodi quas voluptatibus nisi odio perferendis? Ea.
+                    Autem vero neque quisquam sunt assumenda aut fugit laudantium! Molestiae dignissimos unde, officiis
+                    vel quia aspernatur placeat laboriosam ipsum fuga odio deleniti eius laborum distinctio. Corrupti
+                    veritatis officia fugiat voluptas.
+                    Corrupti nostrum ea, ipsum facere, incidunt distinctio dolores cupiditate molestiae esse asperiores
+                    eum placeat aspernatur animi provident? Omnis veniam provident voluptate aperiam! Voluptatum fuga
+                    blanditiis cupiditate eius velit ducimus delectus?
+                    Ullam eveniet libero ipsum consectetur reiciendis, molestias est adipisci quod nobis quos eum illum
+                    nihil, id autem perspiciatis fugiat. Maxime sit molestiae facilis dignissimos nobis ad ullam
+                    corporis eum. Quod.
+                    Repellendus facilis perspiciatis temporibus perferendis ut consectetur, nemo rem, illum labore autem
+                    nisi hic? Sequi maiores corporis placeat nam quidem optio, molestiae consequatur quod voluptas
+                    officiis tempora nostrum adipisci veritatis.
+                    Voluptas voluptatem exercitationem vel, est, excepturi hic maiores ducimus cum, modi explicabo
+                    nostrum. Dicta, unde aut magni earum ipsam placeat mollitia architecto nihil sunt, accusantium
+                    fugiat ducimus pariatur? Aliquam, nostrum.
+                    Fugiat omnis tempora repudiandae eum libero delectus quos nisi impedit esse quod expedita obcaecati
+                    quo qui labore, ipsa numquam et quasi adipisci perferendis reiciendis laborum similique. Laborum
+                    laudantium dolores minus.
+                    Laborum excepturi nemo officiis. Rerum tempore quas maiores odio cumque velit! Velit quidem
+                    aspernatur exercitationem illo incidunt sit distinctio provident molestias facere sed impedit rem
+                    esse, nihil nesciunt, ullam sapiente?
+                    Eveniet in suscipit saepe alias iure impedit magni unde veritatis itaque praesentium consequuntur
+                    numquam inventore dolorem nobis aut, dolorum voluptatem. Vitae minima dicta vel accusamus aliquam,
+                    quis facilis magni fuga.
+                    A, animi id illum harum velit quam eaque, consequuntur iure soluta tempore ea asperiores doloribus
+                    perspiciatis quibusdam assumenda optio, culpa non sit? Deleniti, tempore voluptate soluta blanditiis
+                    molestiae quibusdam dicta.
+                    Aut harum nesciunt, provident earum commodi neque adipisci. Tempore impedit iure, dolore doloribus
+                    ipsam voluptate recusandae rem numquam quos dignissimos, excepturi quibusdam atque totam eum illum
+                    praesentium, incidunt nemo dolorem.
+                </div>
+
+            </div>
+            <!-- Destra (60%) -->
+            <div id="right-side">
+                <!--Header-->
+                <header class="d-flex justify-content-between align-items-center">
+                    <div id="right-header-left" class="d-flex justify-content-between align-items-center">
+                        <img src="./img/avatar_1.png" alt="">
+                        <div id="contact-name">
+                            <span>Michele</span> <br>
+                            <span id="last-access">Ultimo accesso alle 12:00</span>
+                        </div>
+
+                    </div>
+                    <div id="right-header-right" class="d-flex align-items-center">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-solid fa-paperclip"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </header>
+                <div id="chat" class="d-flex flex-column w-100">
+                    <div id="sent">
+                        <p>Lorem Ipsum Dolor</p>
+                    </div>
+                    <div id="received">
+                        <p>Lorem Ipsum Dolor</p>
+                    </div>
+                    <div id="sent">
+                        <p>Lorem Ipsum Dolor</p>
+                    </div>
+                    <div id="sent">
+                        <p>Lorem Ipsum Dolor</p>
+                    </div>
+                    <div id="sent">
+                        <p>Lorem Ipsum Dolor</p>
+                    </div>
+                    <div id="sent">
+                        <p>Lorem Ipsum Dolor</p>
+                    </div>
+                    <div id="received">
+                        <p>Lorem Ipsum Dolor</p>
+                    </div>
+                    <div id="received">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam reiciendis non vero, tenetur
+                            porro, neque et ullam officia quod voluptas cupiditate deserunt tempore magnam incidunt sint
+                            eveniet rerum modi culpa.
+                            Praesentium soluta eaque distinctio, aperiam nulla perferendis harum nisi, commodi, aliquid
+                            ratione nam similique autem rem. Dolorem dolore assumenda necessitatibus possimus at aliquid
+                            cum eius reiciendis sint blanditiis. Unde, quam.
+                            Sit, quasi! Eveniet dolor similique soluta culpa quaerat rerum corporis doloribus dolorem
+                            dolores delectus possimus tempore doloremque mollitia accusantium, ut molestiae optio.
+                            Veniam temporibus voluptas consequuntur provident voluptatibus id adipisci!</p>
+                    </div>
+
+                </div>
+                <!--Message bar-->
+                <footer id="message" class="d-flex justify-content-between align-items-center">
+                    <i class="fa-regular fa-face-smile"></i>
+                    <input type="text" placeholder="Scrivi un messaggio">
+                    <i class="fa-solid fa-microphone"></i>
+                </footer>
+
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

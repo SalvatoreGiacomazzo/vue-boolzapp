@@ -7,27 +7,152 @@
 /*Body Background*/
 body {
     background: rgb(0, 150, 136);
-    background: linear-gradient(0deg, rgba(219, 219, 211, 1) 80%, rgba(0, 150, 136, 1) 80%);
+    background: linear-gradient(0deg, rgba(219, 219, 211, 1) 80%, rgba(0, 150, 136, 1) 20%);
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
-/*Big container*/
+/*Main container*/
 #big-container {
     height: 94vh;
-    border: 2px black solid;
+    margin-left: 10px;
     width: 75%;
     background-color: white;
-
+    max-height: 100%;
 }
 
+#app {
+    max-height: 100%;
+}
 
+/*Left side*/
 #left-side {
-    flex-basis: 40%;
+    width: 40%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+
+
 }
 
+#notifications i {
+    color: #8edafc;
+    background-color: white;
+    border-radius: 50%;
+    padding: 15px;
+}
+
+#notifications {
+    height: 150px;
+    background-color: #8edafc
+}
+
+
+#search {
+    background-color: #EAEAEA;
+}
+
+#search input {
+    width: 80%;
+
+}
+
+#search i {
+    color: grey;
+
+    padding: 8px 10px;
+}
+
+/*Right side */
 #right-side {
-    flex-basis: 60%;
+    width: 60%;
+    max-height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#chat {
+    background-image: url(./img/mine.png);
+}
+
+#message {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#message input {
+    width: 70%;
+    height: 80%;
+    border: none;
+}
+
+#contact-name {
+    margin-left: 25px;
+}
+
+#contact-name #last-access {
+    color: grey;
+}
+
+/*Shared css rules */
+#searchbar,
+#message {
+    height: 90px;
+    background-color: #EAEAEA;
+}
+
+#chat,
+#chatlist {
+    overflow: auto;
+    height: 100%;
+    padding: 10px;
+    flex-grow: 1;
+}
+
+header {
+    height: 50px;
+    background-color: #EAEAEA;
+    flex-shrink: 0;
+}
+
+#left-header-right i,
+#right-header-right i {
+    margin: 10px;
+    color: grey;
+}
+
+#left-header-left img,
+#right-header-left img {
+    display: block;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+
+
+#sent,
+#received {
+    margin: 40px 50px;
+    max-width: 50%;
+    border-radius: 5%;
+    max-width: 60%;
+    padding: 5px 10px;
+}
+
+#sent {
+
+    background-color: #d5f9ba;
+    text-align: right;
+    align-self: flex-end;
+}
+
+#received {
+    background-color: white;
+    text-align: left;
+    align-self: start;
 }
