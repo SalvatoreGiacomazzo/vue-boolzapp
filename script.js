@@ -3,6 +3,7 @@ const { createApp } = Vue;
 const App = {
     data() {
         return {
+            clickedChat: 0,
             contacts: [
                 {
                     name: 'Michele',
@@ -172,7 +173,9 @@ const App = {
     },
 
     methods: {
-
+        clickChat(index) {        //Metodo per cliccare sulle varie chat
+            this.clickedChat = index;
+        }
     },
     mounted() {
         console.log('vue prova')

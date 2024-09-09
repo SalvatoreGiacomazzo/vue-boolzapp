@@ -51,14 +51,15 @@
                 </div>
                 <!--Chats-->
                 <div id="chatlist">
-                    <div id="singlechat" class="d-flex align-items-center" v-for="contact in contacts">
+                    <div id="singlechat" class="d-flex align-items-center" v-for="(contact, index) in contacts"
+                        :key="index" @click="clickChat(index)"> <!--Cambio dinamico di chat al click-->
                         <div id="chat-photo">
                             <img :src="contact.avatar" alt="">
                         </div>
                         <div id="chatname" class="">
                             <!--Inserisci il nome del contatto tramite VueJs-->
                             {{ contact.name }} <br>
-                            <span>Ultimo messaggio alle 12</span>
+                            <span>Ultimo accesso alle 12</span>
                         </div>
 
 
@@ -71,9 +72,10 @@
                 <!--Header-->
                 <header class="d-flex justify-content-between align-items-center">
                     <div id="right-header-left" class="d-flex justify-content-between align-items-center">
-                        <img src="./img/avatar_1.png" alt="">
+                        <img :src="contacts[clickedChat].avatar" alt="">
+                        <!--mostro nell'header la foto e il nome del contatto che clicco-->
                         <div id="contact-name">
-                            <span>Michele</span> <br>
+                            <span>{{contacts[clickedChat].name}}</span> <br>
                             <span id="last-access">Ultimo accesso alle 12:00</span>
                         </div>
 
@@ -86,7 +88,7 @@
                 </header>
                 <!--Chat-->
                 <div id="chat">
-                    <div v-for="(message, index) in contacts[0].messages" :key="index"
+                    <div v-for="(message, index) in contacts[clickedChat].messages" :key="index"
                         class="message-container d-flex flex-column w-100">
                         <!--Sent messages-->
                         <div v-if="message.status === 'sent'" class="sent">
