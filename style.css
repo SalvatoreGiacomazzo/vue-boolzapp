@@ -12,10 +12,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
-/*Main container*/
+/*-----------------------Main container-------------------*/
 #big-container {
     height: 94vh;
     margin-left: 10px;
@@ -28,15 +27,13 @@ body {
     max-height: 100%;
 }
 
-/*Left side*/
+/*--------------Left side-------------*/
 #left-side {
     width: 40%;
     height: 100%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-
-
 }
 
 #notifications i {
@@ -67,7 +64,20 @@ body {
     padding: 8px 10px;
 }
 
-/*Right side */
+#chatname span {
+    font-size: 0.6rem;
+    color: grey;
+}
+
+#chatname {
+    margin-left: 15px;
+}
+
+#singlechat:hover {
+    background-color: rgb(211, 208, 208);
+}
+
+/*--------------------Right side---------------------- */
 #right-side {
     width: 60%;
     max-height: 100%;
@@ -99,7 +109,12 @@ body {
     color: grey;
 }
 
-/*Shared css rules */
+#singlechat {
+    height: 70px;
+
+}
+
+/*------------------Shared css rules ---------------------*/
 #searchbar,
 #message {
     height: 90px;
@@ -127,13 +142,13 @@ header {
 }
 
 #left-header-left img,
-#right-header-left img {
+#right-header-left img,
+#singlechat img {
     display: block;
     height: 30px;
     width: 30px;
     border-radius: 50%;
 }
-
 
 #sent,
 #received {
@@ -145,7 +160,6 @@ header {
 }
 
 #sent {
-
     background-color: #d5f9ba;
     text-align: right;
     align-self: flex-end;

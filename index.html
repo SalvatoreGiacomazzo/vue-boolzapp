@@ -51,50 +51,18 @@
                 </div>
                 <!--Chats-->
                 <div id="chatlist">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus iusto officiis inventore,
-                    reiciendis odio asperiores, harum sed aliquid fugiat repudiandae eum nulla neque, consequuntur
-                    laborum. Tenetur ipsum adipisci quis enim.
-                    Nisi quis commodi porro? Suscipit facilis praesentium quis ipsa asperiores cumque dolor ut
-                    architecto quisquam? Alias necessitatibus, explicabo tenetur hic debitis quidem, inventore qui sed
-                    excepturi minima doloremque dolorum nostrum.
-                    Commodi distinctio deleniti illo dolores ut adipisci, fugiat numquam vel obcaecati facilis neque
-                    cupiditate totam dolore, iste, ad repellendus dolor minus inventore ex perspiciatis nam placeat
-                    magnam nulla vero! Nobis?
-                    Dolorum debitis quibusdam nihil quod distinctio voluptate sequi repellat ratione culpa, animi illo
-                    iste tenetur cum mollitia, esse provident accusamus natus! Pariatur a ratione ipsa totam saepe
-                    molestiae odit alias!
-                    Tempora eum ea fuga architecto nobis deserunt neque illo velit dolorem vero aperiam unde voluptas
-                    vel optio, beatae non sint eligendi a molestiae commodi quas voluptatibus nisi odio perferendis? Ea.
-                    Autem vero neque quisquam sunt assumenda aut fugit laudantium! Molestiae dignissimos unde, officiis
-                    vel quia aspernatur placeat laboriosam ipsum fuga odio deleniti eius laborum distinctio. Corrupti
-                    veritatis officia fugiat voluptas.
-                    Corrupti nostrum ea, ipsum facere, incidunt distinctio dolores cupiditate molestiae esse asperiores
-                    eum placeat aspernatur animi provident? Omnis veniam provident voluptate aperiam! Voluptatum fuga
-                    blanditiis cupiditate eius velit ducimus delectus?
-                    Ullam eveniet libero ipsum consectetur reiciendis, molestias est adipisci quod nobis quos eum illum
-                    nihil, id autem perspiciatis fugiat. Maxime sit molestiae facilis dignissimos nobis ad ullam
-                    corporis eum. Quod.
-                    Repellendus facilis perspiciatis temporibus perferendis ut consectetur, nemo rem, illum labore autem
-                    nisi hic? Sequi maiores corporis placeat nam quidem optio, molestiae consequatur quod voluptas
-                    officiis tempora nostrum adipisci veritatis.
-                    Voluptas voluptatem exercitationem vel, est, excepturi hic maiores ducimus cum, modi explicabo
-                    nostrum. Dicta, unde aut magni earum ipsam placeat mollitia architecto nihil sunt, accusantium
-                    fugiat ducimus pariatur? Aliquam, nostrum.
-                    Fugiat omnis tempora repudiandae eum libero delectus quos nisi impedit esse quod expedita obcaecati
-                    quo qui labore, ipsa numquam et quasi adipisci perferendis reiciendis laborum similique. Laborum
-                    laudantium dolores minus.
-                    Laborum excepturi nemo officiis. Rerum tempore quas maiores odio cumque velit! Velit quidem
-                    aspernatur exercitationem illo incidunt sit distinctio provident molestias facere sed impedit rem
-                    esse, nihil nesciunt, ullam sapiente?
-                    Eveniet in suscipit saepe alias iure impedit magni unde veritatis itaque praesentium consequuntur
-                    numquam inventore dolorem nobis aut, dolorum voluptatem. Vitae minima dicta vel accusamus aliquam,
-                    quis facilis magni fuga.
-                    A, animi id illum harum velit quam eaque, consequuntur iure soluta tempore ea asperiores doloribus
-                    perspiciatis quibusdam assumenda optio, culpa non sit? Deleniti, tempore voluptate soluta blanditiis
-                    molestiae quibusdam dicta.
-                    Aut harum nesciunt, provident earum commodi neque adipisci. Tempore impedit iure, dolore doloribus
-                    ipsam voluptate recusandae rem numquam quos dignissimos, excepturi quibusdam atque totam eum illum
-                    praesentium, incidunt nemo dolorem.
+                    <div id="singlechat" class="d-flex align-items-center" v-for="contact in contacts">
+                        <div id="chat-photo">
+                            <img :src="contact.avatar" alt="">
+                        </div>
+                        <div id="chatname" class="">
+                            <!--Inserisci il nome del contatto tramite VueJs-->
+                            {{ contact.name }} <br>
+                            <span>Ultimo messaggio alle 12</span>
+                        </div>
+
+
+                    </div>
                 </div>
 
             </div>
@@ -116,6 +84,7 @@
                         <i class="fa-solid fa-ellipsis-vertical"></i>
                     </div>
                 </header>
+                <!--Chat-->
                 <div id="chat" class="d-flex flex-column w-100">
                     <div id="sent">
                         <p>Lorem Ipsum Dolor</p>
