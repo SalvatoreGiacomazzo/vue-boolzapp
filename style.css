@@ -114,6 +114,11 @@ body {
 
 }
 
+.message-time {
+    font-size: 0.5rem;
+    color: grey;
+}
+
 /*------------------Shared css rules ---------------------*/
 #searchbar,
 #message {
@@ -150,8 +155,8 @@ header {
     border-radius: 50%;
 }
 
-#sent,
-#received {
+.sent,
+.received {
     margin: 40px 50px;
     max-width: 50%;
     border-radius: 5%;
@@ -159,13 +164,13 @@ header {
     padding: 5px 10px;
 }
 
-#sent {
+.sent {
     background-color: #d5f9ba;
     text-align: right;
     align-self: flex-end;
 }
 
-#received {
+.received {
     background-color: white;
     text-align: left;
     align-self: start;

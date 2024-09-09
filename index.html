@@ -85,38 +85,19 @@
                     </div>
                 </header>
                 <!--Chat-->
-                <div id="chat" class="d-flex flex-column w-100">
-                    <div id="sent">
-                        <p>Lorem Ipsum Dolor</p>
-                    </div>
-                    <div id="received">
-                        <p>Lorem Ipsum Dolor</p>
-                    </div>
-                    <div id="sent">
-                        <p>Lorem Ipsum Dolor</p>
-                    </div>
-                    <div id="sent">
-                        <p>Lorem Ipsum Dolor</p>
-                    </div>
-                    <div id="sent">
-                        <p>Lorem Ipsum Dolor</p>
-                    </div>
-                    <div id="sent">
-                        <p>Lorem Ipsum Dolor</p>
-                    </div>
-                    <div id="received">
-                        <p>Lorem Ipsum Dolor</p>
-                    </div>
-                    <div id="received">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam reiciendis non vero, tenetur
-                            porro, neque et ullam officia quod voluptas cupiditate deserunt tempore magnam incidunt sint
-                            eveniet rerum modi culpa.
-                            Praesentium soluta eaque distinctio, aperiam nulla perferendis harum nisi, commodi, aliquid
-                            ratione nam similique autem rem. Dolorem dolore assumenda necessitatibus possimus at aliquid
-                            cum eius reiciendis sint blanditiis. Unde, quam.
-                            Sit, quasi! Eveniet dolor similique soluta culpa quaerat rerum corporis doloribus dolorem
-                            dolores delectus possimus tempore doloremque mollitia accusantium, ut molestiae optio.
-                            Veniam temporibus voluptas consequuntur provident voluptatibus id adipisci!</p>
+                <div id="chat">
+                    <div v-for="(message, index) in contacts[0].messages" :key="index"
+                        class="message-container d-flex flex-column w-100">
+                        <!--Sent messages-->
+                        <div v-if="message.status === 'sent'" class="sent">
+                            <p>{{ message.message }}</p>
+                            <span class="message-time">{{ message.date }}</span>
+                        </div>
+                        <!--Received messages-->
+                        <div v-else class="received">
+                            <p>{{ message.message }}</p>
+                            <span class="message-time">{{ message.date }}</span>
+                        </div>
                     </div>
 
                 </div>
