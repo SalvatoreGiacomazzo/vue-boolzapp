@@ -1,5 +1,13 @@
 const { createApp } = Vue;
+const DateTime = luxon.DateTime
+console.log(DateTime)
 
+const now = DateTime.now()
+console.log(now)
+DateTime.now().toString()
+
+
+const currentDate = now.toLocaleString(DateTime.DATETIME_SHORT)
 const App = {
     data() {
         return {
@@ -181,14 +189,15 @@ const App = {
         sendMessage(content) {
             if (content.trim() !== '') {  //Metodo per far apparire in chat il messaggio
                 this.contacts[this.clickedChat].messages.push({     //Pusho il messaggio inviato
-                    date: new Date().toLocaleString(),   //Data al momento dell'invio
+                    date: currentDate,   //Data al momento dell'invio
                     message: content,
                     status: 'sent'
                 });
                 this.sentMessage = '';   //Pulisco l'input dopo l'invio
                 setTimeout(() => {
+                    const replyDate = DateTime.now().toLocaleString(DateTime.DATETIME_SHORT)
                     this.contacts[this.clickedChat].messages.push({         //Ricevo il messaggio 'ok' dopo un secondo dopo aver mandato un messaggio
-                        date: new Date().toLocaleString(),
+                        date: replyDate,
                         message: 'ok',
                         status: 'received'
                     });
