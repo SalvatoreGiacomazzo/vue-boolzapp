@@ -4,6 +4,8 @@ const App = {
     data() {
         return {
             clickedChat: 0,
+            sentMessage: '',
+
             contacts: [
                 {
                     name: 'Michele',
@@ -175,10 +177,28 @@ const App = {
     methods: {
         clickChat(index) {        //Metodo per cliccare sulle varie chat
             this.clickedChat = index;
+        },
+        sendMessage(content) {
+            if (content.trim() !== '') {  //Metodo per far apparire in chat il messaggio
+                this.contacts[this.clickedChat].messages.push({     //Pusho il messaggio inviato
+                    date: new Date().toLocaleString(),   //Data al momento dell'invio
+                    message: content,
+                    status: 'sent'
+                });
+                this.sentMessage = '';   //Pulisco l'input dopo l'invio
+                setTimeout(() => {
+                    this.contacts[this.clickedChat].messages.push({         //Ricevo il messaggio 'ok' dopo un secondo dopo aver mandato un messaggio
+                        date: new Date().toLocaleString(),
+                        message: 'ok',
+                        status: 'received'
+                    });
+                }, 1000);
+            }
         }
     },
     mounted() {
         console.log('vue prova')
+
     }
 
 }; createApp(App).mount('#app');
