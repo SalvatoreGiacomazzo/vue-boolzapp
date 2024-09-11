@@ -13,7 +13,7 @@ const App = {
         return {
             clickedChat: 0,
             sentMessage: '',
-
+            resultContacts: '',
             contacts: [
                 {
                     name: 'Michele',
@@ -203,11 +203,18 @@ const App = {
                     });
                 }, 1000);
             }
-        }
+        },
     },
-    mounted() {
-        console.log('vue prova')
+    computed: {        //Computed per cercare i contatti nella searchbar
+        filteredList() {
+            return this.contacts.filter((contact) => {
+                return contact.name.toLowerCase().includes(this.resultContacts.toLowerCase())
+            })
+        },
+    },
 
+    mounted() {
+        console.log('vue prova');
     }
 
 }; createApp(App).mount('#app');

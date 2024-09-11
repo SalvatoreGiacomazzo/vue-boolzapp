@@ -47,12 +47,13 @@
                 <!--searchbar section-->
                 <div id="search">
                     <i class="fa-solid fa-magnifying-glass"></i>
-                    <input type="text" placeholder="Cerca o inizia una nuova Chat">
+                    <input type="text" placeholder="Cerca o inizia una nuova Chat" v-model.trim="resultContacts">
                 </div>
                 <!--Chats-->
                 <div id="chatlist">
-                    <div id="singlechat" class="d-flex align-items-center" v-for="(contact, index) in contacts"
-                        :key="index" @click="clickChat(index)"> <!--Cambio dinamico di chat al click-->
+                    <div id="singlechat" class="d-flex align-items-center" v-for="(contact, index) in filteredList"
+                        :key="index" @click="clickChat(index)">
+                        <!--Cambio dinamico di chat al click-->
                         <div id="chat-photo">
                             <img :src="contact.avatar" alt="">
                         </div>
